@@ -18,7 +18,6 @@ func GetClientSet() *kubernetes.Clientset {
 	} else {
 		kubeconfig = flag.String("kubeconfig", "", "absolute path to the kubeConfig file")
 	}
-	fmt.Println(kubeconfig)
 	config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
 	if err != nil {
 		fmt.Println(err)

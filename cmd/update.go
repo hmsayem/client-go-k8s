@@ -6,15 +6,16 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var getCmd = &cobra.Command{
-	Use:   "get",
+// updateCmd represents the update command
+var updateCmd = &cobra.Command{
+	Use:   "update",
 	Short: "A brief description",
 	Long: "A longer description",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("get called")
+		fmt.Println("update called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(getCmd)
+	rootCmd.AddCommand(updateCmd)
 }

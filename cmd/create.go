@@ -1,3 +1,4 @@
+
 package cmd
 
 import (
@@ -6,15 +7,16 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var getCmd = &cobra.Command{
-	Use:   "get",
+// createCmd represents the create command
+var createCmd = &cobra.Command{
+	Use:   "create",
 	Short: "A brief description",
 	Long: "A longer description",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("get called")
+		fmt.Println("create called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(getCmd)
+	rootCmd.AddCommand(createCmd)
 }
